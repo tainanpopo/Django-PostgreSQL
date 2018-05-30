@@ -13,7 +13,7 @@
 會利用pgadmin3的原因是直接利用[Heroku](https://dashboard.heroku.com/)的dashboard無法看出tabel內的資料。
 
 ## Push to Heroku
-* 確認專案設置完整之後，先在本地migrate後，再開始push。
+### 確認專案設置完整之後，先在本地migrate後，再開始push。
 
 heroku login
 
@@ -25,11 +25,11 @@ git commit -m "django-postgresql"
 
 git push heroku master
 
-* 推上去之後會failed，輸入以下指令:
+### 推上去之後會failed，輸入以下指令:
 
 heroku config:set DISABLE_COLLECTSTATIC=1
 
-* 給予[Heroku](https://dashboard.heroku.com/)APP一個乾淨空白的資料庫跟超級使用者。
+### 給予[Heroku](https://dashboard.heroku.com/)APP一個乾淨空白的資料庫跟超級使用者。
 
 heroku run python manage.py makemigrations
 
@@ -38,7 +38,7 @@ heroku run python manage.py migrate
 heroku run python manage.py createsuperuser
 
 ## 參考資料
-* 熱於分享的高人
+### 熱於分享的高人
 
 [twtrubiks](https://github.com/twtrubiks/Deploying_Django_To_Heroku_Tutorial)
 
